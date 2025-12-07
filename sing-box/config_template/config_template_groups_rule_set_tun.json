@@ -197,6 +197,17 @@
       "default": "Japan"
     },
     {
+      "tag":"Emby",
+      "type":"selector",
+      "outbounds":[
+        "direct",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan"
+      ]
+    },
+    {
       "tag":"Netflix",
       "type":"selector",
       "outbounds":[
@@ -459,6 +470,10 @@
         "outbound": "TikTok"
       },
       {
+        "rule_set": "my-custom-emby",
+        "outbound": "Emby"
+      },
+      {
         "rule_set": ["geoip-netflix", "geosite-netflix"],
         "outbound": "Netflix"
       },
@@ -672,6 +687,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/my-custom-games.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "my-custom-emby",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/emby.srs",
         "download_detour": "direct"
       },
       {
