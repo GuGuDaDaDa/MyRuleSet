@@ -24,20 +24,62 @@
         "tag": "google",
         "type": "tls",
         "server": "8.8.8.8",
-        "detour": "Proxy",
-        "client_subnet": "1.1.1.1/24"
+        "detour": "Proxy"
       },
       {
         "tag": "local",
         "type": "https",
-        "server": "223.5.5.5",
-        "client_subnet": "223.5.5.5/24"
+        "server": "223.5.5.5"
       },
       {
         "tag": "fakeip",
         "type": "fakeip",
         "inet4_range": "198.18.0.0/15",
         "inet6_range": "fc00::/18"
+      }
+    ],
+    "rules": [
+      {
+        "clash_mode": "direct",
+        "server": "local"
+      },
+      {
+        "clash_mode": "global",
+        "server": "google"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "rule_set": "geosite-cn",
+        "server": "fakeip"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "server": "local"
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "rule_set": "geosite-geolocation-!cn",
+            "invert": true
+          },
+          {
+            "rule_set": "geoip-cn"
+          }
+        ],
+        "server": "google",
+        "client_subnet": "114.114.114.114/24"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "fakeip"
       }
     ],
     "independent_cache": true,
@@ -290,11 +332,7 @@
       "outbounds":[
         "direct",
         "Proxy"
-      ],
-      "domain_resolver": {
-        "server": "local",
-        "rewrite_ttl": 300
-      }
+      ]
     },
     {
       "tag":"HongKong",
@@ -376,8 +414,7 @@
   ],
   "route": {
     "default_domain_resolver": {
-      "server": "google",
-      "rewrite_ttl": 60
+      "server": "local"
     },
     "auto_detect_interface": true,
     "final": "Proxy",
