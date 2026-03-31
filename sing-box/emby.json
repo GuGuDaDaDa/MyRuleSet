@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": "micu.hk"
+    },
+    {
+      "domain_suffix": "embyplus.org"
+    }
+  ]
+}
