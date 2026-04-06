@@ -293,6 +293,18 @@
       ]
     },
     {
+      "tag":"Download",
+      "type":"selector",
+      "outbounds":[
+        "auto",
+        "direct",
+        "{all}"
+      ],
+      "filter":[
+        {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效|当前流量|重置|到期"]}
+      ]
+    },
+    {
       "tag":"Global",
       "type":"selector",
       "outbounds":[ 
@@ -511,6 +523,10 @@
         "outbound": "Streaming"
       },
       {
+        "rule_set": ["download"],
+        "outbound": "Download"
+      },
+      {
         "rule_set": "geosite-geolocation-!cn",
         "outbound": "Global"
       },
@@ -707,6 +723,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/emby.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "my-custom-emby",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/download.srs",
         "download_detour": "direct"
       },
       {
