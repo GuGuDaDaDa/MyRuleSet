@@ -726,7 +726,7 @@
         "download_detour": "direct"
       },
       {
-        "tag": "my-custom-emby",
+        "tag": "download",
         "type": "remote",
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/download.srs",
