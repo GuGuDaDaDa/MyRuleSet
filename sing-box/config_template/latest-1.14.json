@@ -21,8 +21,7 @@
   "http_clients": [
     {
       "tag": "rule-set-download",
-      "version": 2,
-      "detour": "direct"
+      "version": 2
     }
   ],
   "dns": {
