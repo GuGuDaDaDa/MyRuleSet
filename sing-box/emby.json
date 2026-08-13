@@ -1,8 +1,8 @@
 {
-  "version": 2,
+  "version": 3,
   "rules": [
     {
-      "domain_suffix": "micu.hk"
+      "domain_regex": "^media[0-9]*\.micu\.hk$"
     },
     {
       "domain_suffix": "embyplus.org"
