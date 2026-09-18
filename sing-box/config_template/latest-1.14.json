@@ -463,7 +463,7 @@
         "outbound": "direct"
       },
       {
-        "rule_set": ["geosite-ai", "geosite-gemini"],
+        "rule_set": "geosite-ai",
         "outbound": "AI"
       },
       {
@@ -550,13 +550,7 @@
         "tag": "geosite-ai",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/Toperlock/sing-box-geosite@main/rule/OpenAI.srs"
-      },
-      {
-        "tag": "geosite-gemini",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/Gemini.srs"
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/AI.srs"
       },
       {
         "tag": "geosite-youtube",
