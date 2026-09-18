@@ -107,7 +107,7 @@
       ]
     },
     {
-      "tag":"OpenAI",
+      "tag":"AI",
       "type":"selector",
       "outbounds":[
         "TaiWan",
@@ -463,8 +463,8 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "geosite-openai",
-        "outbound": "OpenAI"
+        "rule_set": "geosite-ai",
+        "outbound": "AI"
       },
       {
         "rule_set": ["geosite-youtube", "geoip-google", "geosite-google", "geosite-github"],
@@ -547,10 +547,16 @@
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs"
       },
       {
-        "tag": "geosite-openai",
+        "tag": "geosite-ai",
         "type": "remote",
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/Toperlock/sing-box-geosite@main/rule/OpenAI.srs"
+      },
+      {
+        "tag": "geosite-ai",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/Gemini.srs"
       },
       {
         "tag": "geosite-youtube",
