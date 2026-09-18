@@ -463,7 +463,7 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "[geosite-ai, geosite-gemini]",
+        "rule_set": ["geosite-ai", "geosite-gemini"],
         "outbound": "AI"
       },
       {
