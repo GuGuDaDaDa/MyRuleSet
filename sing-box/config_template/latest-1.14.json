@@ -463,7 +463,7 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "geosite-ai",
+        "rule_set": "[geosite-ai,geosite-gemini]",
         "outbound": "AI"
       },
       {
@@ -553,7 +553,7 @@
         "url": "https://testingcf.jsdelivr.net/gh/Toperlock/sing-box-geosite@main/rule/OpenAI.srs"
       },
       {
-        "tag": "geosite-ai",
+        "tag": "geosite-gemini",
         "type": "remote",
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/Gemini.srs"
