@@ -459,6 +459,10 @@
         "outbound": "direct"
       },
       {
+        "rule_set": "archlinux",
+        "outbound": "direct"
+      },
+      {
         "rule_set": "geosite-openai",
         "outbound": "OpenAI"
       },
@@ -730,6 +734,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/emby-cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "archlinux",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/archlinux.srs",
         "download_detour": "direct"
       },
       {

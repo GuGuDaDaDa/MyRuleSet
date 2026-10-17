@@ -463,6 +463,10 @@
         "outbound": "direct"
       },
       {
+        "rule_set": "archlinux",
+        "outbound": "direct"
+      },
+      {
         "rule_set": "geosite-ai",
         "outbound": "AI"
       },
@@ -707,6 +711,12 @@
         "type": "remote",
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/emby-cn.srs"
+      },
+      {
+        "tag": "archlinux",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/archlinux.srs"
       },
       {
         "tag": "download",
