@@ -30,7 +30,7 @@
         "tag": "google",
         "type": "tls",
         "server": "8.8.8.8",
-        "detour": "Proxy"
+        "detour": "auto"
       },
       {
         "tag": "local",
@@ -65,6 +65,7 @@
         "action": "respond"
       }
     ],
+    "final": "local",
     "strategy": "prefer_ipv4"
   },
   "inbounds": [
