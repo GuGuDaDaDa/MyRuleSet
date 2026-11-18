@@ -24,7 +24,7 @@
         "tag": "google",
         "type": "tls",
         "server": "8.8.8.8",
-        "detour": "auto"
+        "detour": "Proxy"
       },
       {
         "tag": "local",
