@@ -46,6 +46,10 @@
         "server": "local"
       },
       {
+        "rule_set": "geosite-geolocation-!cn",
+        "server": "google"
+      },
+      {
         "type": "logical",
         "mode": "and",
         "rules": [

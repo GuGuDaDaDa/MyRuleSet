@@ -53,6 +53,10 @@
       },
       {
         "rule_set": "geosite-geolocation-!cn",
+        "server": "google"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
         "invert": true,
         "action": "evaluate",
         "server": "google",
