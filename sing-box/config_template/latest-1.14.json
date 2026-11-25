@@ -559,7 +559,7 @@
         "tag": "geosite-ai",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/AI.srs"
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@40b822c/sing-box/AI.srs"
       },
       {
         "tag": "geosite-youtube",
@@ -703,31 +703,31 @@
         "tag": "my-custom-games",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/my-custom-games.srs"
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@40b822c/sing-box/my-custom-games.srs"
       },
       {
         "tag": "my-custom-emby",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/emby.srs"
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@40b822c/sing-box/emby.srs"
       },
       {
         "tag": "my-custom-emby-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/emby-cn.srs"
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@40b822c/sing-box/emby-cn.srs"
       },
       {
         "tag": "archlinux",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/archlinux.srs"
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@40b822c/sing-box/archlinux.srs"
       },
       {
         "tag": "download",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/download.srs"
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@40b822c/sing-box/download.srs"
       },
       {
         "tag": "geosite-hbo",
