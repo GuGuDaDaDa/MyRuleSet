@@ -34,13 +34,6 @@
     ],
     "rules": [
       {
-        "query_type": [
-          "AAAA"
-        ],
-        "action": "predefined",
-        "rcode": "NOERROR"
-      },
-      {
         "clash_mode": "direct",
         "server": "local"
       },
