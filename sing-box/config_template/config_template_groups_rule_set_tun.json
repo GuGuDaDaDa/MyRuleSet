@@ -686,14 +686,14 @@
         "tag": "my-custom-games",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/my-custom-games.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@40b822c/sing-box/my-custom-games.srs",
         "download_detour": "direct"
       },
       {
         "tag": "my-custom-emby",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@main/sing-box/emby.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@40b822c/sing-box/emby.srs",
         "download_detour": "direct"
       },
       {
