@@ -727,35 +727,35 @@
         "tag": "my-custom-games",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@40b822c/sing-box/my-custom-games.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@d8a02a7/sing-box/my-custom-games.srs",
         "download_detour": "direct"
       },
       {
         "tag": "my-custom-emby",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@40b822c/sing-box/emby.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@d8a02a7/sing-box/emby.srs",
         "download_detour": "direct"
       },
       {
         "tag": "my-custom-emby-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@40b822c/sing-box/emby-cn.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@d8a02a7/sing-box/emby-cn.srs",
         "download_detour": "direct"
       },
       {
         "tag": "archlinux",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@40b822c/sing-box/archlinux.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@d8a02a7/sing-box/archlinux.srs",
         "download_detour": "direct"
       },
       {
         "tag": "download",
         "type": "remote",
         "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@40b822c/sing-box/download.srs",
+        "url": "https://testingcf.jsdelivr.net/gh/GuGuDaDaDa/MyRuleSet@d8a02a7/sing-box/download.srs",
         "download_detour": "direct"
       },
       {
