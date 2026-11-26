@@ -34,6 +34,11 @@
     ],
     "rules": [
       {
+        "query_type": ["AAAA"],
+        "action": "predefined",
+        "rcode": "NOERROR"
+      },
+      {
         "clash_mode": "direct",
         "server": "local"
       },
@@ -50,19 +55,17 @@
         "server": "google"
       },
       {
-        "type": "logical",
-        "mode": "and",
-        "rules": [
-          {
-            "rule_set": "geosite-geolocation-!cn",
-            "invert": true
-          },
-          {
-            "rule_set": "geoip-cn"
-          }
-        ],
+        "rule_set": "geosite-geolocation-!cn",
+        "invert": true,
+        "action": "evaluate",
         "server": "google",
+        "tag": "google-response",
         "client_subnet": "114.114.114.114/24"
+      },
+      {
+        "match_response": "google-response",
+        "rule_set": "geoip-cn",
+        "action": "respond"
       }
     ],
     "final": "local",
