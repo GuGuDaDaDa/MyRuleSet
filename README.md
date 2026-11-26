@@ -44,23 +44,40 @@ FATAL start service: start router: initialize rule-set[..]: validate dns rule[n]
 sub rule[1]: Legacy Address Filter Fields in DNS rules is deprecated in sing-box 1.14.0
 ```
 
-现有模板里的这条规则就属于 legacy 地址过滤：
+模板里原本有一条这样的规则（「不在境外列表，但解析出中国 IP → 用 google 复核」），
+现已按官方迁移指南改成 `evaluate` + `match_response`：
 
 ```json
 {
-  "type": "logical", "mode": "and",
-  "rules": [
-    { "rule_set": "geosite-geolocation-!cn", "invert": true },
-    { "rule_set": "geoip-cn" }
-  ],
-  "server": "google"
+  "rule_set": "geosite-geolocation-!cn",
+  "invert": true,
+  "action": "evaluate",
+  "server": "google",
+  "tag": "google-response",
+  "client_subnet": "114.114.114.114/24"
+},
+{
+  "match_response": "google-response",
+  "rule_set": "geoip-cn",
+  "action": "respond"
 }
 ```
 
-所以在迁移掉它之前，不能在 DNS 层全局拦截 AAAA。想优先 IPv4 有两条路：
+`evaluate` 只能写在顶层规则上，不终止匹配；`match_response` 用 evaluate 的 tag
+引用它的响应，`respond` 直接把该响应返回。这样 `geoip-cn` 不再是裸的地址过滤
+字段，`query_type` 才能共存。
 
-- 系统层：`/etc/gai.conf` 加一行 `precedence ::ffff:0:0/96  100`，只影响 glibc 程序（curl、git、paru、java），可随时撤销；
-- 配置层：先用 `evaluate` + `match_response` 把上面这条规则迁到 1.14 新语法，再加 `query_type: ["AAAA"]` 的拦截规则。
+改完之后模板就能在 DNS 层拦截 AAAA 了：
+
+```json
+{ "query_type": ["AAAA"], "action": "predefined", "rcode": "NOERROR" }
+```
+
+用 `predefined` + `NOERROR` 返回空答案（NODATA），客户端会干净地退回 A 记录；
+如果用 `reject`，拿到的是 REFUSED，某些客户端会重试或直接失败。
+
+节点侧的 IPv6 出口对 Fastly、Cloudflare、Google 这些前缀普遍不通，而本机直连的
+IPv6 是好的，所以只在走节点时才有问题。DNS 层拦掉 AAAA 可以一次性绕开。
 
 ## 节点分组过滤
 
